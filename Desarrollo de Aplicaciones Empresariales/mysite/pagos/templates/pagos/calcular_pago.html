@@ -1,0 +1,9 @@
+<h2>{{ titulo }}</h2>
+<form action="{% url 'pagos:enviar' %}" method="post"> {% csrf_token %}
+    Introduzca el costo de su hora:
+    <input type="float" name="pago_por_hora" step="any"><br><br>
+    Introduzca las horas trabajadas:
+    <input type="float" name="horas_trabajadas" step="any"><br><br>
+
+    <input type="submit" name="submit" value="Calcular">
+</form>
